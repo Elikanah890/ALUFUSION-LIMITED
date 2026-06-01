@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Poppins", system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --muted: #e2e8f0;
+  --muted-foreground: #475569;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #e2e8f0;
+  --primary: #ea580c;
+  --primary-foreground: #ffffff;
+  --secondary: #f97316;
+  --accent: #fb923c;
+  --ring: #ea580c;
+}
+
+.dark {
+  --background: #0a0f1a;
+  --foreground: #ffffff;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --card: #111827;
+  --card-foreground: #ffffff;
+  --border: #1f2937;
+  --primary: #ea580c;
+  --primary-foreground: #ffffff;
+  --secondary: #f97316;
+  --accent: #fb923c;
+  --ring: #f97316;
+}
+
+@layer base {
+  * { border-color: var(--border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+}
+
+@layer utilities {
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #ea580c, #f97316, #fb923c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-gradient-orange {
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  }
+  .bg-gradient-orange-soft {
+    background: linear-gradient(135deg, rgba(234, 88, 12, 0.15), rgba(249, 115, 22, 0.05));
+  }
+  .glow-orange {
+    box-shadow: 0 0 40px -10px rgba(234, 88, 12, 0.6);
+  }
+  /* FIXED: More opaque glass effect (solid in light mode, semi‑transparent only in dark mode) */
+  .glass {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: color-mix(in oklab, var(--background) 95%, transparent);
+    border-bottom: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+  }
+  /* Solid background utility – ensures content always has an opaque background */
+  .bg-background {
+    background-color: var(--background);
+  }
+  .container-x {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .container-x { padding-inline: 2.5rem; }
+  }
+}
