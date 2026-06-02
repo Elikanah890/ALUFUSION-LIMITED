@@ -34,13 +34,20 @@ export default function Footer() {
               alt="867 ALUFUSION Logo"
               className="h-12 w-auto object-contain"
             />
-            <div className="font-display font-extrabold text-xl">
-              ALU<span className="text-gradient-orange">FUSION</span>
+            <div className="flex flex-col leading-tight">
+              <div className="font-display font-extrabold text-xl tracking-tight">
+                <span className="text-white">867 </span>
+                <span className="text-white">ALU</span>
+                <span className="text-gradient-orange">FUSION</span>
+              </div>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-slate-400">
+                LIMITED
+              </span>
             </div>
           </Link>
           <p className="text-orange-300 italic mb-4">"{t("footer_tagline")}"</p>
           <p className="text-slate-400 text-sm leading-relaxed">
-            Premium aluminium and glass works company in Tanzania. Crafting architectural excellence since 2020.
+            Premium aluminium and glass works company in Tanzania. Crafting architectural excellence since 2024.
           </p>
         </div>
 

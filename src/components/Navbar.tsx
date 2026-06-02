@@ -33,25 +33,26 @@ export default function Navbar() {
       }`}
     >
       <div className="container-x flex items-center justify-between gap-4">
-        {/* Logo area – BIGGER */}
+        {/* Logo area – UPDATED */}
         <Link to="/" className="flex items-center gap-3 group">
           <img
             src="/logo/alufusion-logo.png"
             alt="867 ALUFUSION Logo"
-            className="h-12 w-auto object-contain md:h-14"  // ← larger logo
+            className="h-12 w-auto object-contain md:h-14"
           />
           <div className="flex flex-col leading-tight">
             <span className="font-display font-extrabold text-xl md:text-2xl tracking-tight">
+              <span className="text-foreground">867 </span>
               <span className="text-foreground">ALU</span>
               <span className="text-gradient-orange">FUSION</span>
             </span>
             <span className="text-[11px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              Limited
+              LIMITED
             </span>
           </div>
         </Link>
 
-        {/* Desktop navigation – MORE SPACED */}
+        {/* Desktop navigation */}
         <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
           {links.map((l) => (
             <NavLink
