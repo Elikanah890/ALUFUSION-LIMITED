@@ -10,7 +10,7 @@ export const translations = {
     cta_quote: "Get Quote",
     cta_free_quote: "Get Free Quote",
     cta_view_work: "View Our Work",
-    hero_badge: "Premium Aluminium & Glass • Since 2020",
+    hero_badge: "Premium Aluminium & Glass • Since 2024",
     hero_title: "We Install Your Vision",
     hero_sub: "Precision Aluminium • Modern Glass Works • Steel Fabrication",
     hero_desc:
