@@ -17,12 +17,6 @@ const objectives = [
   { title: "Lead in Safety & Sustainability", desc: "Champion responsible building practices, modern safety protocols, and energy-efficient material choices." },
 ];
 
-const team = [
-  { name: "Managing Director", role: "Strategic Leadership", img: "/team/alufusion-team-1.png" },
-  { name: "Head of Operations", role: "Project Delivery", img: "/team/alufusion-team-2.png" },
-  { name: "Lead Engineer", role: "Technical Design", img: "/team/alufusion-team-1.png" },
-];
-
 export default function About() {
   return (
     <div className="bg-background">
@@ -39,7 +33,7 @@ export default function About() {
             <span className="text-orange-500 font-semibold uppercase tracking-widest text-sm">Our Journey</span>
             <h2 className="font-display font-black text-4xl md:text-5xl mt-3 mb-6">Building Tanzania's Future, One Project at a Time</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-5">
-              Founded in 2020, 867 ALUFUSION LIMITED has grown into a trusted partner for architects, developers, contractors, and homeowners across Tanzania.
+              Founded in 2024, 867 ALUFUSION LIMITED has grown into a trusted partner for architects, developers, contractors, and homeowners across Tanzania.
               We specialize in the design, fabrication, and installation of high-quality aluminium and glass solutions.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -124,26 +118,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-24 md:py-32">
-        <div className="container-x">
-          <SectionHeading eyebrow="Leadership" title="Meet Our Team" sub="Experienced professionals dedicated to your vision" />
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {team.map((m) => (
-              <div key={m.name} className="rounded-2xl overflow-hidden bg-card border border-border group">
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img src={m.img} alt={m.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="font-display font-bold text-xl">{m.name}</h3>
-                  <p className="text-orange-500 font-semibold text-sm mt-1">{m.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Industries */}
       <section className="py-20 bg-muted/40">
         <div className="container-x text-center">
@@ -176,5 +150,5 @@ export function PageHeader({ title, sub, img }: { title: string; sub: string; im
         </motion.p>
       </div>
     </section>
-  );
+  ); 
 }

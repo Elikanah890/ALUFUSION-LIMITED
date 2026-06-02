@@ -147,14 +147,14 @@ export default function Home() {
               className="rounded-2xl shadow-2xl w-full aspect-[4/5] object-cover"
             />
             <div className="absolute -bottom-6 -right-6 bg-gradient-orange text-white p-6 rounded-2xl shadow-2xl hidden md:block">
-              <div className="font-display font-black text-4xl">5+</div>
+              <div className="font-display font-black text-4xl">2+</div>
               <div className="text-sm">Years of Excellence</div>
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <span className="text-orange-500 font-semibold uppercase tracking-widest text-sm">About Us</span>
             <h2 className="font-display font-black text-4xl md:text-5xl mt-3 mb-6">
-              Excellence in <span className="text-gradient-orange">Aluminium & Glass</span> Since 2020
+              Excellence in <span className="text-gradient-orange">Aluminium & Glass</span> Since 2024
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               867 ALUFUSION LIMITED is a leading aluminium and glass works company based in Tanzania, transforming architectural visions into reality.

@@ -187,7 +187,7 @@ export default function Contact() {
           {/* Contact info */}
           <div className="lg:col-span-2 space-y-5">
             {[
-              { icon: Phone, title: "Call Us", value: "+255 778 959 501", sub: "Mon–Fri 8am–6pm" },
+              { icon: Phone, title: "Call Us", value: "+255 687 959 501", sub: "Mon–Fri 8am–6pm" },
               { icon: Mail, title: "Email Us", value: "info@867alufusion.com", sub: "Responses within 24 hours" },
               { icon: MapPin, title: "Visit Us", value: "Dar es Salaam, Tanzania", sub: "View on Google Maps" },
             ].map((c) => (
