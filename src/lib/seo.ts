@@ -29,6 +29,7 @@ export function applySEO(props: SEOProps) {
   document.title = fullTitle;
 
   const metaTags: Record<string, string> = {
+    "robots": "index, follow",
     description,
     "og:title": fullTitle,
     "og:description": description,
@@ -46,6 +47,7 @@ export function applySEO(props: SEOProps) {
   };
 
   const names: Record<string, string> = {
+    "robots": "name",
     description: "name",
     "og:title": "property",
     "og:description": "property",
