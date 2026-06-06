@@ -5,10 +5,10 @@
       "has": [
         {
           "type": "host",
-          "value": "www.867alufusionlimited.co.tz"
+          "value": "867alufusionlimited.co.tz"
         }
       ],
-      "destination": "https://867alufusionlimited.co.tz/$1",
+      "destination": "https://www.867alufusionlimited.co.tz/$1",
       "permanent": true
     }
   ],
