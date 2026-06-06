@@ -3,4 +3,3 @@ Allow: /
 Disallow: /cdn-cgi/
 
 Sitemap: https://867alufusionlimited.co.tz/sitemap.xml
-Host: https://867alufusionlimited.co.tz
