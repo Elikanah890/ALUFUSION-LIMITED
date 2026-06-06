@@ -1,21 +1,49 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, MapPin, ChevronDown, Send, Paperclip, CheckCircle } from "lucide-react";
 import { PageHeader } from "./About";
 import { SectionHeading } from "./Home";
+import { applySEO, SITE_URL } from "@/lib/seo";
 
 const faqs = [
-  { q: "What areas do you serve?", a: "We serve all regions of Tanzania including Dar es Salaam, Arusha, Mwanza, Zanzibar, and more." },
-  { q: "Do you provide free quotes?", a: "Yes, we provide free consultation and quotes for all projects." },
-  { q: "What is your typical project timeline?", a: "Timeline varies by project scope. Small projects take 1–2 weeks, large commercial projects 4–8 weeks." },
-  { q: "Do you offer warranty?", a: "Yes, we offer warranty on all our installation work and materials." },
-  { q: "Can you work with my architect/contractor?", a: "Absolutely! We collaborate with architects and contractors on all projects." },
-  { q: "What brands of aluminium do you use?", a: "We use premium grade aluminium profiles from trusted manufacturers." },
+  {
+    q: "What areas do you serve?",
+    a: "We serve all regions of Tanzania including Dar es Salaam, Arusha, Mwanza, Zanzibar, and more.",
+  },
+  {
+    q: "Do you provide free quotes?",
+    a: "Yes, we provide free consultation and quotes for all projects.",
+  },
+  {
+    q: "What is your typical project timeline?",
+    a: "Timeline varies by project scope. Small projects take 1–2 weeks, large commercial projects 4–8 weeks.",
+  },
+  {
+    q: "Do you offer warranty?",
+    a: "Yes, we offer warranty on all our installation work and materials.",
+  },
+  {
+    q: "Can you work with my architect/contractor?",
+    a: "Absolutely! We collaborate with architects and contractors on all projects.",
+  },
+  {
+    q: "What brands of aluminium do you use?",
+    a: "We use premium grade aluminium profiles from trusted manufacturers.",
+  },
 ];
 
-const inputCls = "w-full px-4 py-3 rounded-md bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-orange-500 transition";
+const inputCls =
+  "w-full px-4 py-3 rounded-md bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-orange-500 transition";
 
-function Field({ label, required, children }: { label: string; required?: boolean; children: React.ReactNode }) {
+function Field({
+  label,
+  required,
+  children,
+}: {
+  label: string;
+  required?: boolean;
+  children: React.ReactNode;
+}) {
   return (
     <label className="block">
       <span className="block text-sm font-semibold mb-2">
@@ -39,7 +67,19 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  useEffect(() => {
+    applySEO({
+      title: "Contact Us — Get a Free Quote for Aluminium & Glass Works",
+      description:
+        "Get in touch with 867 ALUFUSION LIMITED for your aluminium and glass project in Tanzania. Request a free quote, schedule a consultation, or call us at +255 687 959 501. Serving Dar es Salaam, Arusha, Mwanza, Zanzibar, and all of Tanzania.",
+      path: "/contact",
+      image: "/images/hd.jpeg",
+    });
+  }, []);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -78,12 +118,16 @@ export default function Contact() {
           {/* Form */}
           <div className="lg:col-span-3 bg-card border border-border rounded-2xl p-8 md:p-10">
             <h2 className="font-display font-black text-3xl mb-2">Send Us a Message</h2>
-            <p className="text-muted-foreground mb-8">We respond to every inquiry within 24 hours.</p>
+            <p className="text-muted-foreground mb-8">
+              We respond to every inquiry within 24 hours.
+            </p>
             {submitted ? (
               <div className="p-8 rounded-xl bg-gradient-orange-soft border border-orange-500/40 text-center">
                 <CheckCircle className="w-12 h-12 text-orange-500 mx-auto mb-3" />
                 <h3 className="font-display font-bold text-xl mb-2">Message Sent!</h3>
-                <p className="text-muted-foreground">Thanks for reaching out. Our team will get back to you shortly.</p>
+                <p className="text-muted-foreground">
+                  Thanks for reaching out. Our team will get back to you shortly.
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="grid gap-5">
@@ -167,7 +211,9 @@ export default function Contact() {
                   </div>
                 </Field>
                 <Field label="Upload drawings or reference images (optional)">
-                  <label className={`${inputCls} flex items-center gap-2 cursor-pointer text-muted-foreground`}>
+                  <label
+                    className={`${inputCls} flex items-center gap-2 cursor-pointer text-muted-foreground`}
+                  >
                     <Paperclip className="w-4 h-4" /> Choose files...
                     <input type="file" multiple className="hidden" />
                   </label>
@@ -188,15 +234,30 @@ export default function Contact() {
           <div className="lg:col-span-2 space-y-5">
             {[
               { icon: Phone, title: "Call Us", value: "+255 687 959 501", sub: "Mon–Fri 8am–6pm" },
-              { icon: Mail, title: "Email Us", value: "info@867alufusion.com", sub: "Responses within 24 hours" },
-              { icon: MapPin, title: "Visit Us", value: "Dar es Salaam, Tanzania", sub: "View on Google Maps" },
+              {
+                icon: Mail,
+                title: "Email Us",
+                value: "info@867alufusion.com",
+                sub: "Responses within 24 hours",
+              },
+              {
+                icon: MapPin,
+                title: "Visit Us",
+                value: "Dar es Salaam, Tanzania",
+                sub: "View on Google Maps",
+              },
             ].map((c) => (
-              <div key={c.title} className="p-6 rounded-2xl bg-card border border-border flex gap-4 hover:border-orange-500/50 transition">
+              <div
+                key={c.title}
+                className="p-6 rounded-2xl bg-card border border-border flex gap-4 hover:border-orange-500/50 transition"
+              >
                 <div className="shrink-0 w-12 h-12 rounded-xl bg-gradient-orange grid place-items-center">
                   <c.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">{c.title}</div>
+                  <div className="text-sm text-muted-foreground uppercase tracking-wider font-semibold">
+                    {c.title}
+                  </div>
                   <div className="font-display font-bold text-lg mt-1">{c.value}</div>
                   <div className="text-sm text-muted-foreground">{c.sub}</div>
                 </div>
@@ -219,7 +280,11 @@ export default function Contact() {
       {/* FAQ */}
       <section className="py-24 md:py-32">
         <div className="container-x">
-          <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions" sub="Quick answers to common questions" />
+          <SectionHeading
+            eyebrow="FAQ"
+            title="Frequently Asked Questions"
+            sub="Quick answers to common questions"
+          />
           <div className="max-w-3xl mx-auto mt-12 space-y-3">
             {faqs.map((f, i) => (
               <div key={f.q} className="rounded-xl bg-card border border-border overflow-hidden">
@@ -228,7 +293,9 @@ export default function Contact() {
                   className="w-full flex justify-between items-center text-left p-6 hover:bg-muted/40 transition"
                 >
                   <span className="font-display font-bold text-lg">{f.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-orange-500 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />
+                  <ChevronDown
+                    className={`w-5 h-5 text-orange-500 transition-transform ${openFaq === i ? "rotate-180" : ""}`}
+                  />
                 </button>
                 <AnimatePresence>
                   {openFaq === i && (

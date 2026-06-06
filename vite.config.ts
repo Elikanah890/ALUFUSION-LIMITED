@@ -14,4 +14,19 @@ export default defineConfig({
     host: "::",
     port: 8080,
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom", "react-router-dom"],
+          motion: ["framer-motion"],
+          radix: ["@radix-ui/react-accordion"],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600,
+    target: "es2022",
+    cssMinify: true,
+    minify: "esbuild",
+  },
 });

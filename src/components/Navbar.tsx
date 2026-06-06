@@ -31,14 +31,17 @@ export default function Navbar() {
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled ? "glass py-2" : "py-4 bg-transparent"
       }`}
+      role="banner"
     >
       <div className="container-x flex items-center justify-between gap-4">
         {/* Logo area – UPDATED */}
         <Link to="/" className="flex items-center gap-3 group">
           <img
             src="/logo/alufusion-logo.png"
-            alt="867 ALUFUSION Logo"
+            alt="867 ALUFUSION LIMITED logo"
             className="h-12 w-auto object-contain md:h-14"
+            width="56"
+            height="56"
           />
           <div className="flex flex-col leading-tight">
             <span className="font-display font-extrabold text-xl md:text-2xl tracking-tight">
@@ -53,7 +56,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop navigation */}
-        <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
+        <nav className="hidden lg:flex items-center gap-2 xl:gap-4" aria-label="Main navigation">
           {links.map((l) => (
             <NavLink
               key={l.to}
@@ -61,9 +64,7 @@ export default function Navbar() {
               end={l.to === "/"}
               className={({ isActive }) =>
                 `px-4 py-2 rounded-md text-base font-medium transition-colors ${
-                  isActive
-                    ? "text-primary"
-                    : "text-foreground/80 hover:text-primary"
+                  isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
                 }`
               }
             >
@@ -76,6 +77,7 @@ export default function Navbar() {
           <button
             onClick={() => setLang(lang === "en" ? "sw" : "en")}
             className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-semibold text-foreground/80 hover:text-primary hover:bg-muted transition"
+            aria-label={`Switch language to ${lang === "en" ? "Swahili" : "English"}`}
           >
             <Languages className="w-4 h-4" />
             <span>{lang.toUpperCase()}</span>
@@ -83,6 +85,7 @@ export default function Navbar() {
           <button
             onClick={toggle}
             className="p-2 rounded-md text-foreground/80 hover:text-primary hover:bg-muted transition"
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
             {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
@@ -95,6 +98,8 @@ export default function Navbar() {
           <button
             onClick={() => setOpen((o) => !o)}
             className="lg:hidden p-2 rounded-md text-foreground hover:bg-muted"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
           >
             {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

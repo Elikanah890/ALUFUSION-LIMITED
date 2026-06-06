@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { ScrollProgress, BackToTop } from "@/components/ScrollUtils";
 import CookieConsent from "@/components/CookieConsent";
+import StructuredData from "@/components/StructuredData";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
@@ -21,10 +22,11 @@ function ScrollToTop() {
 export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <StructuredData />
       <ScrollProgress />
       <ScrollToTop />
       <Navbar />
-      <main>
+      <main role="main">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

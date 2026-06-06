@@ -31,8 +31,10 @@ export default function Footer() {
           <Link to="/" className="flex items-center gap-2 mb-5 hover:opacity-80 transition">
             <img
               src="/logo/alufusion-logo.png"
-              alt="867 ALUFUSION Logo"
+              alt="867 ALUFUSION LIMITED logo"
               className="h-12 w-auto object-contain"
+              width="56"
+              height="56"
             />
             <div className="flex flex-col leading-tight">
               <div className="font-display font-extrabold text-xl tracking-tight">
@@ -40,14 +42,13 @@ export default function Footer() {
                 <span className="text-white">ALU</span>
                 <span className="text-gradient-orange">FUSION</span>
               </div>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-slate-400">
-                LIMITED
-              </span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-slate-400">LIMITED</span>
             </div>
           </Link>
           <p className="text-orange-300 italic mb-4">"{t("footer_tagline")}"</p>
           <p className="text-slate-400 text-sm leading-relaxed">
-            Premium aluminium and glass works company in Tanzania. Crafting architectural excellence since 2024.
+            Premium aluminium and glass works company in Tanzania. Crafting architectural excellence
+            since 2024.
           </p>
         </div>
 
@@ -76,27 +77,47 @@ export default function Footer() {
           <h4 className="font-display font-bold text-lg mb-5 text-white">Services</h4>
           <ul className="space-y-3 text-slate-400 text-sm">
             <li>
-              <Link to="/services" onClick={() => scrollToSection("aluminium")} className="hover:text-orange-400 transition cursor-pointer">
+              <Link
+                to="/services"
+                onClick={() => scrollToSection("aluminium")}
+                className="hover:text-orange-400 transition cursor-pointer"
+              >
                 Aluminium Works
               </Link>
             </li>
             <li>
-              <Link to="/services" onClick={() => scrollToSection("glass")} className="hover:text-orange-400 transition cursor-pointer">
+              <Link
+                to="/services"
+                onClick={() => scrollToSection("glass")}
+                className="hover:text-orange-400 transition cursor-pointer"
+              >
                 Glass Works
               </Link>
             </li>
             <li>
-              <Link to="/services" onClick={() => scrollToSection("steel")} className="hover:text-orange-400 transition cursor-pointer">
+              <Link
+                to="/services"
+                onClick={() => scrollToSection("steel")}
+                className="hover:text-orange-400 transition cursor-pointer"
+              >
                 Steel Fabrication
               </Link>
             </li>
             <li>
-              <Link to="/services" onClick={() => scrollToSection("maintenance")} className="hover:text-orange-400 transition cursor-pointer">
+              <Link
+                to="/services"
+                onClick={() => scrollToSection("maintenance")}
+                className="hover:text-orange-400 transition cursor-pointer"
+              >
                 Maintenance
               </Link>
             </li>
             <li>
-              <Link to="/services" onClick={() => scrollToSection("design")} className="hover:text-orange-400 transition cursor-pointer">
+              <Link
+                to="/services"
+                onClick={() => scrollToSection("design")}
+                className="hover:text-orange-400 transition cursor-pointer"
+              >
                 Custom Design
               </Link>
             </li>
@@ -124,18 +145,23 @@ export default function Footer() {
               <span>Mon–Fri 8am–6pm</span>
             </li>
           </ul>
-          
+
           <div className="mt-6">
             <p className="text-sm text-slate-300 mb-2">Subscribe for updates</p>
-            <form className="flex gap-2" onSubmit={handleSubscribe}>
+            <form
+              className="flex gap-2"
+              onSubmit={handleSubscribe}
+              aria-label="Newsletter subscribe"
+            >
               <input
                 type="email"
                 name="email"
                 placeholder="you@email.com"
                 required
+                aria-label="Email address"
                 className="flex-1 min-w-0 px-3 py-2 rounded-md bg-white/5 border border-white/10 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-orange-500"
               />
-              <button 
+              <button
                 type="submit"
                 className="px-4 py-2 rounded-md bg-gradient-orange text-white text-sm font-semibold hover:opacity-90 transition"
               >
@@ -143,36 +169,40 @@ export default function Footer() {
               </button>
             </form>
           </div>
-          
+
           <div className="flex gap-3 mt-6">
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
+            <a
+              href="https://instagram.com"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="Follow us on Instagram"
               className="w-9 h-9 grid place-items-center rounded-full bg-white/5 hover:bg-gradient-orange transition"
             >
               <Instagram className="w-4 h-4" />
             </a>
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
+            <a
+              href="https://facebook.com"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="Follow us on Facebook"
               className="w-9 h-9 grid place-items-center rounded-full bg-white/5 hover:bg-gradient-orange transition"
             >
               <Facebook className="w-4 h-4" />
             </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
+            <a
+              href="https://linkedin.com"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="Connect on LinkedIn"
               className="w-9 h-9 grid place-items-center rounded-full bg-white/5 hover:bg-gradient-orange transition"
             >
               <Linkedin className="w-4 h-4" />
             </a>
-            <a 
-              href="https://wa.me/255687959501" 
-              target="_blank" 
+            <a
+              href="https://wa.me/255687959501"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
               className="w-9 h-9 grid place-items-center rounded-full bg-white/5 hover:bg-gradient-orange transition"
             >
               <MessageCircle className="w-4 h-4" />
@@ -182,10 +212,16 @@ export default function Footer() {
       </div>
 
       <div className="container-x border-t border-white/10 pt-8 flex flex-col md:flex-row gap-3 items-center justify-between text-sm text-slate-500">
-        <p>© {new Date().getFullYear()} 867 ALUFUSION LIMITED. {t("footer_rights")}</p>
+        <p>
+          © {new Date().getFullYear()} 867 ALUFUSION LIMITED. {t("footer_rights")}
+        </p>
         <div className="flex gap-6">
-          <Link to="/privacy" className="hover:text-orange-400 transition">Privacy Policy</Link>
-          <Link to="/terms" className="hover:text-orange-400 transition">Terms of Service</Link>
+          <Link to="/contact" className="hover:text-orange-400 transition">
+            Privacy Policy
+          </Link>
+          <Link to="/contact" className="hover:text-orange-400 transition">
+            Terms of Service
+          </Link>
         </div>
       </div>
     </footer>

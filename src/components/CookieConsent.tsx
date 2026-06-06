@@ -9,7 +9,8 @@ export default function CookieConsent() {
   return (
     <div className="fixed bottom-4 left-4 right-4 md:right-auto md:max-w-md z-50 bg-card border border-border rounded-xl shadow-2xl p-5">
       <p className="text-sm text-foreground mb-4">
-        We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies.
+        We use cookies to enhance your browsing experience and analyze our traffic. By clicking
+        "Accept", you consent to our use of cookies.
       </p>
       <div className="flex gap-2">
         <button

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://867alufusionlimited.co.tz/</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://867alufusionlimited.co.tz/"/>
+    <xhtml:link rel="alternate" hreflang="sw" href="https://867alufusionlimited.co.tz/"/>
+  </url>
+  <url>
+    <loc>https://867alufusionlimited.co.tz/about</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://867alufusionlimited.co.tz/about"/>
+  </url>
+  <url>
+    <loc>https://867alufusionlimited.co.tz/services</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://867alufusionlimited.co.tz/services"/>
+  </url>
+  <url>
+    <loc>https://867alufusionlimited.co.tz/projects</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://867alufusionlimited.co.tz/projects"/>
+  </url>
+  <url>
+    <loc>https://867alufusionlimited.co.tz/contact</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://867alufusionlimited.co.tz/contact"/>
+  </url>
+</urlset>
