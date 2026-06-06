@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
 
-Sitemap: https://867alufusionlimited.co.tz/sitemap.xml
+Sitemap: https://www.867alufusionlimited.co.tz/sitemap.xml
