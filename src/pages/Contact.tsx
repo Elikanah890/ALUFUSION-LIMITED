@@ -71,7 +71,7 @@ export default function Contact() {
     applySEO({
       title: "Contact Us — Get a Free Quote for Aluminium & Glass Works",
       description:
-        "Get in touch with 867 ALUFUSION LIMITED for your aluminium and glass project in Tanzania. Request a free quote, schedule a consultation, or call us at +255 687 959 501. Serving Dar es Salaam, Arusha, Mwanza, Zanzibar, and all of Tanzania.",
+        "Get in touch with 867 ALUFUSION LIMITED for your aluminium and glass project in Tanzania. Request a free quote, schedule a consultation, or call us at +255 778 959 501. Serving Dar es Salaam, Arusha, Mwanza, Zanzibar, and all of Tanzania.",
       path: "/contact",
       image: "/images/hd.jpeg",
     });
@@ -233,7 +233,7 @@ export default function Contact() {
           {/* Contact info */}
           <div className="lg:col-span-2 space-y-5">
             {[
-              { icon: Phone, title: "Call Us", value: "+255 687 959 501", sub: "Mon–Fri 8am–6pm" },
+              { icon: Phone, title: "Call Us", value: "+255 778 959 501", sub: "Mon–Fri 8am–6pm" },
               {
                 icon: Mail,
                 title: "Email Us",
@@ -243,8 +243,8 @@ export default function Contact() {
               {
                 icon: MapPin,
                 title: "Visit Us",
-                value: "Dar es Salaam, Tanzania",
-                sub: "View on Google Maps",
+                value: "Silver Sand Road, Mtongani Street, Kunduchi",
+                sub: "Dar es Salaam, TZ, 14122",
               },
             ].map((c) => (
               <div
@@ -269,12 +269,16 @@ export default function Contact() {
 
       {/* Map */}
       <section className="bg-muted/40">
-        <iframe
-          title="Our location"
-          src="https://www.google.com/maps?q=Dar+es+Salaam,+Tanzania&output=embed"
-          className="w-full h-[450px] border-0"
-          loading="lazy"
-        />
+        <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
+          <iframe
+            title="Our location"
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15851.368932662983!2d39.207602360395256!3d-6.666464172004631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1skunduchi%20mtongani%20silver%20sand%20road!5e0!3m2!1sen!2stz!4v1784026833469!5m2!1sen!2stz"
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </div>
       </section>
 
       {/* FAQ */}

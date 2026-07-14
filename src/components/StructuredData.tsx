@@ -12,11 +12,13 @@ const ORGANIZATION_SCHEMA = {
   url: SITE_URL,
   logo: `${SITE_URL}/logo/alufusion-logo.png`,
   image: `${SITE_URL}/images/hd.jpeg`,
-  telephone: "+255687959501",
+  telephone: "+255778959501",
   email: "info@867alufusion.com",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Silver Sand Road, Mtongani Street, Kunduchi",
     addressLocality: "Dar es Salaam",
+    postalCode: "14122",
     addressCountry: "TZ",
   },
   areaServed: [
@@ -80,7 +82,7 @@ const ORGANIZATION_SCHEMA = {
   foundingDate: "2024",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+255687959501",
+    telephone: "+255778959501",
     contactType: "sales",
     availableLanguage: ["English", "Swahili"],
   },

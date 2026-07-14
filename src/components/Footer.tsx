@@ -130,8 +130,8 @@ export default function Footer() {
           <ul className="space-y-3 text-slate-400 text-sm">
             <li className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-orange-500" />
-              <a href="tel:+255687959501" className="hover:text-orange-400 transition">
-                +255 687 959 501
+              <a href="tel:+255778959501" className="hover:text-orange-400 transition">
+                +255 778 959 501
               </a>
             </li>
             <li className="flex items-center gap-2">
@@ -199,7 +199,7 @@ export default function Footer() {
               <Linkedin className="w-4 h-4" />
             </a>
             <a
-              href="https://wa.me/255687959501"
+              href="https://wa.me/255778959501"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
